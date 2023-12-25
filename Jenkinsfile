@@ -23,6 +23,11 @@ pipeline{
         }
 
         stage('2.Compile'){
+            agent {
+                docker {
+                    image 'node:14-alpine'
+                 }
+            }
             steps {
                sh 'pwd && ls -alh'
                sh 'node -v'
