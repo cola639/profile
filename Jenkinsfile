@@ -23,8 +23,6 @@ pipeline{
         }
 
         stage('2.Compile'){
-            agent {
-            }
             steps {
                sh 'pwd && ls -alh'
                sh 'node -v'
