@@ -1,3 +1,4 @@
+# 构建自动拉取nginx1.22版本
 FROM nginx:1.22
 
 # 构建参数,在Jenkinsfile中构建镜像时定义
