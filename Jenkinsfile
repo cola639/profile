@@ -48,7 +48,7 @@ pipeline {
         stage('4.Deploy') {
             steps {
                 sh 'pwd && ls -alh'
-                // 如果已存在则先删除
+                // 如果已存在这个容器则先删除
                 sh 'docker rm -f ${IMAGE_NAME} || true && docker rmi $(docker images -q -f dangling=true) || true'
                 // 向外暴露端口再由容器内部Nginx代理到静态文件
                 // 第一个 `LINKED_CONTAINER_NAME`：这是已存在的 Docker 容器的名称。这个容器已经在 Docker 环境中运行，您想要与之建立链接。
