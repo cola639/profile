@@ -1,29 +1,22 @@
-# This file is the main docker file configurations
-
-# Official Node JS runtime as a parent image
+FROM nginx:1.22
 FROM node:10.16.0-alpine
 
-# Set the working directory to ./app
-WORKDIR /app
+# 构建参数,在Jenkinsfile中构建镜像时定义
+ARG PROFILE
 
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
-COPY package.json ./
+# 将dist文件中的内容复制到 `/usr/share/nginx/html` 这个目录下面
+COPY dist/  /usr/share/nginx/html/
 
-RUN apk add --no-cache git
+# 用本地配置文件来替换nginx镜像里的默认配置
+COPY profile_nginx.conf /etc/nginx/nginx.conf
 
-# Install any needed packages
-RUN npm install
+# 将 SSL 证书和密钥复制到镜像中
+# COPY ruoyi-cert.pem /etc/ssl/certs/
+# COPY ruoyi-key.pem /etc/ssl/private/
 
-# Audit fix npm packages
-RUN npm audit fix
+# DocKer容器内部运行的端口 不是实际端口
+EXPOSE 80
+# EXPOSE 443
 
-# Bundle app source
-COPY . /app
-
-# Make port 3000 available to the world outside this container
-EXPOSE 3000
-
-# Run app.js when the container launches
-CMD ["npm", "start"]
+# 以前台形式持续运行
+CMD ["nginx", "-g", "daemon off;"]
