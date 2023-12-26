@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-global-assign */
 fs = require("fs");
 const https = require("https");
 process = require("process");
