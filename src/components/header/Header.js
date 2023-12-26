@@ -11,7 +11,8 @@ import {
   openSource,
   blogSection,
   talkSection,
-  achievementSection
+  achievementSection,
+  title
 } from "../../portfolio";
 
 function Header() {
@@ -42,36 +43,36 @@ function Header() {
         <ul className={isDark ? "dark-menu menu" : "menu"}>
           {viewSkills && (
             <li>
-              <a href="#skills">Skills</a>
+              <a href="#skills">{title.skills}</a>
             </li>
           )}
           {viewExperience && (
             <li>
-              <a href="#experience">Work Experiences</a>
+              <a href="#experience">{title.workExperiences}</a>
             </li>
           )}
           {viewOpenSource && (
             <li>
-              <a href="#opensource">Open Source</a>
+              <a href="#opensource">{title.openSource}</a>
             </li>
           )}
           {viewAchievement && (
             <li>
-              <a href="#achievements">Achievements</a>
+              <a href="#achievements">{title.achievements}</a>
             </li>
           )}
           {viewBlog && (
             <li>
-              <a href="#blogs">Blogs</a>
+              <a href="#blogs">{title.blog}</a>
             </li>
           )}
           {viewTalks && (
             <li>
-              <a href="#talks">Talks</a>
+              <a href="#talks">{title.talk}</a>
             </li>
           )}
           <li>
-            <a href="#contact">Contact Me</a>
+            <a href="#contact">{title.contactMe}</a>
           </li>
 
           <li>

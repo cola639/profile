@@ -22,11 +22,7 @@ const ToggleSwitchLanguage = () => {
   };
 
   return (
-    <div
-      className="wrap"
-      onClick={switchLanguage}
-      title={isCN ? "Swith to Engilish" : "切换成中文"}
-    >
+    <div className="wrap" onClick={switchLanguage} title="中文/English">
       <span className="emoji">{isCN ? emoji("🇨🇳") : emoji("🇺🇸")}</span>
     </div>
   );

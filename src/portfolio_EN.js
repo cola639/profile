@@ -5,6 +5,17 @@
 import emoji from "react-easy-emoji";
 import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
 
+const title = {
+  skills: "Skills",
+  workExperiences: "Work Experiences",
+  openSource: "Open Source",
+  achievements: "Achievements",
+  blog: "Blogs",
+  talk: "Talks",
+  contactMe: "Contact Me"
+};
+
+// -------------------------------原来定义-------------------------------------------------------- \\
 // Splash Screen
 
 const splashScreen = {
@@ -377,6 +388,8 @@ const twitterDetails = {
 const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
 
 export {
+  title,
+  //---------\\
   illustration,
   greeting,
   socialMediaLinks,

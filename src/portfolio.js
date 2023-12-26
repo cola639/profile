@@ -4,6 +4,8 @@ const isCN = window.location.href.includes("cn");
 const language = isCN ? require("./portfolio_CN") : require("./portfolio_EN");
 // 读取里面导出的变量
 const {
+  title,
+  //--------\\
   illustration,
   greeting,
   socialMediaLinks,
@@ -24,6 +26,8 @@ const {
 } = language;
 
 export {
+  title,
+  //--------\\
   illustration,
   greeting,
   socialMediaLinks,

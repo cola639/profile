@@ -5,6 +5,17 @@
 import emoji from "react-easy-emoji";
 import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
 
+const title = {
+  skills: "技能",
+  workExperiences: "工作经历",
+  openSource: "开源项目",
+  achievements: "成就",
+  blog: "博客",
+  talk: "讲座",
+  contactMe: "联系方式"
+};
+
+// -------------------------------原来定义-------------------------------------------------------- \\
 // Splash Screen
 
 const splashScreen = {
@@ -20,10 +31,10 @@ const illustration = {
 };
 
 const greeting = {
-  username: "Saad Pasta",
+  username: "锡和",
   title: "Hi 大家好，我是锡和",
   subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks."
+    "一位充满热情的全栈软件开发者🚀，拥有使用JavaScript、Reactjs、Nodejs、React Native以及一些其他酷炫的库和框架构建网页和移动应用的经验。"
   ),
   resumeLink:
     "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
@@ -377,6 +388,8 @@ const twitterDetails = {
 const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
 
 export {
+  title,
+  // -------- \\
   illustration,
   greeting,
   socialMediaLinks,
