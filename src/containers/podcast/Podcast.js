@@ -3,6 +3,8 @@ import "./Podcast.scss";
 import {podcastSection} from "../../portfolio";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
+import AudioPlayer from "react-h5-audio-player";
+import "react-h5-audio-player/lib/styles.css";
 
 export default function Podcast() {
   const {isDark} = useContext(StyleContext);
@@ -37,13 +39,19 @@ export default function Podcast() {
             }
             return (
               <div key={i}>
-                <iframe
+                <AudioPlayer
+                  className="podcast"
+                  src={require("../../assets/mp3/10MB.mp3")}
+                  autoPlay
+                  onPlay={e => console.log("onPlay")}
+                ></AudioPlayer>
+                {/* <iframe
                   className="podcast"
                   src={podcastLink}
                   frameBorder="0"
                   scrolling="no"
                   title="Podcast"
-                ></iframe>
+                ></iframe> */}
               </div>
             );
           })}

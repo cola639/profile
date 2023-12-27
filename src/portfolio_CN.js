@@ -389,7 +389,7 @@ const podcastSection = {
 
 const contactInfo = {
   title: emoji("联系我 ☎️"),
-  subtitle: "如果觉得符合企业要求的话，我的邮箱和电话随时欢迎您联系",
+  subtitle: "如果符合您的企业要求，欢迎电话和邮箱联系 ~ ",
   number: "+86-18826078154",
   email_address: "337507950@qq.com"
 };
