@@ -20,6 +20,11 @@
     "react-twitter-embed": "3.0.3",
     "sass": "^1.32.8"
   },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "dotenv": "^8.2.0",
+    "prettier": "^2.3.1"
+  },
   "scripts": {
     "predeploy": "npm run build",
     "start": "node fetch.js && react-scripts start",
@@ -50,10 +55,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "dotenv": "^8.2.0",
-    "prettier": "^2.3.1"
   }
 }

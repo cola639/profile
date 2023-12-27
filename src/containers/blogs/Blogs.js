@@ -33,9 +33,9 @@ export default function Blogs() {
             setMediumBlogsFunction(response.items);
           })
           .catch(function (error) {
-            console.error(
-              `${error} (because of this error Blogs section could not be displayed. Blogs section has reverted to default)`
-            );
+            // console.error(
+            //   `${error} (because of this error Blogs section could not be displayed. Blogs section has reverted to default)`
+            // );
             setMediumBlogsFunction("Error");
             blogSection.displayMediumBlogs = "false";
           });

@@ -26,9 +26,9 @@ export default function Profile() {
             setProfileFunction(response.data.user);
           })
           .catch(function (error) {
-            console.error(
-              `${error} (because of this error GitHub contact section could not be displayed. Contact section has reverted to default)`
-            );
+            // console.error(
+            //   `${error} (because of this error GitHub contact section could not be displayed. Contact section has reverted to default)`
+            // );
             setProfileFunction("Error");
             openSource.showGithubProfile = "false";
           });
