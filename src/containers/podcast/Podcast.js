@@ -41,9 +41,8 @@ export default function Podcast() {
               <div key={i}>
                 <AudioPlayer
                   className="podcast"
-                  src={require("../../assets/mp3/10MB.mp3")}
+                  src={require("../../assets/mp3/4.3MB.mp3")}
                   autoPlay
-                  onPlay={e => console.log("onPlay")}
                 ></AudioPlayer>
                 {/* <iframe
                   className="podcast"
