@@ -20,6 +20,30 @@ export default function socialMedia() {
         </a>
       ) : null}
 
+      {socialMediaLinks.qqmail ? (
+        <a
+          href={`mailto:${socialMediaLinks.qqmail}`}
+          className="icon-button google"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fas fa-envelope"></i>
+          <span></span>
+        </a>
+      ) : null}
+
+      {socialMediaLinks.npm ? (
+        <a
+          href={socialMediaLinks.npm}
+          className="icon-button npm"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-npm"></i>
+          <span></span>
+        </a>
+      ) : null}
+
       {socialMediaLinks.linkedin ? (
         <a
           href={socialMediaLinks.linkedin}

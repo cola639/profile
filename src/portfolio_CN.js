@@ -15,6 +15,12 @@ const title = {
   contactMe: "联系方式"
 };
 
+const others = {
+  contactMe: "联系方式",
+  seeMyResume: "查看BOSS简历",
+  footer: emoji("👋 期待您的联系 ❤️")
+};
+
 // -------------------------------原来定义-------------------------------------------------------- \\
 // Splash Screen
 
@@ -44,13 +50,16 @@ const greeting = {
 // Social Media Links
 
 const socialMediaLinks = {
-  github: "https://github.com/saadpasta",
-  linkedin: "https://www.linkedin.com/in/saadpasta/",
-  gmail: "saadpasta70@gmail.com",
-  gitlab: "https://gitlab.com/saadpasta",
-  facebook: "https://www.facebook.com/saad.pasta7",
-  medium: "https://medium.com/@saadpasta",
-  stackoverflow: "https://stackoverflow.com/users/10422806/saad-pasta",
+  github: "https://github.com/cola639",
+  qqmail: "337507950@qq.com",
+  npm: "https://www.npmjs.com/~cola639",
+
+  gitlab: "",
+  facebook: "",
+  medium: "",
+  stackoverflow: "",
+  linkedin: "",
+  gmail: "",
   // Instagram, Twitter and Kaggle are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
   display: true // Set true to display this section, defaults to false
@@ -59,16 +68,12 @@ const socialMediaLinks = {
 // Skills Section
 
 const skillsSection = {
-  title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  title: "技术栈",
+  subTitle: "全栈爱好者 对新技术不断追求 并实践到新项目中",
   skills: [
-    emoji(
-      "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
-    ),
-    emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
-    emoji(
-      "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
-    )
+    emoji("⚡ 为企业网页和移动应用开发高度交互式的前端/用户界面"),
+    emoji("⚡ 在常规和单页应用（SPA）技术栈中开发渐进式网页应用（PWA）"),
+    emoji("⚡ 集成第三方服务，如 Wechat SDK、Alibaba Oss、Map SDK。")
   ],
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
@@ -92,6 +97,10 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fab fa-js"
     },
     {
+      skillName: "Vue",
+      fontAwesomeClassname: "fab fa-vuejs"
+    },
+    {
       skillName: "reactjs",
       fontAwesomeClassname: "fab fa-react"
     },
@@ -100,8 +109,8 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fab fa-node"
     },
     {
-      skillName: "swift",
-      fontAwesomeClassname: "fab fa-swift"
+      skillName: "Java",
+      fontAwesomeClassname: "fab fa-java"
     },
     {
       skillName: "npm",
@@ -112,21 +121,26 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fas fa-database"
     },
     {
-      skillName: "aws",
-      fontAwesomeClassname: "fab fa-aws"
-    },
-    {
-      skillName: "firebase",
-      fontAwesomeClassname: "fas fa-fire"
-    },
-    {
-      skillName: "python",
-      fontAwesomeClassname: "fab fa-python"
-    },
-    {
       skillName: "docker",
       fontAwesomeClassname: "fab fa-docker"
     }
+
+    // {
+    //   skillName: "swift",
+    //   fontAwesomeClassname: "fab fa-swift"
+    // },
+    // {
+    //   skillName: "aws",
+    //   fontAwesomeClassname: "fab fa-aws"
+    // },
+    // {
+    //   skillName: "firebase",
+    //   fontAwesomeClassname: "fas fa-fire"
+    // },
+    // {
+    //   skillName: "python",
+    //   fontAwesomeClassname: "fab fa-python"
+    // }
   ],
   display: true // Set false to hide this section, defaults to true
 };
@@ -134,45 +148,47 @@ https://fontawesome.com/icons?d=gallery */
 // Education Section
 
 const educationInfo = {
+  title: "教育经历",
   display: true, // Set false to hide this section, defaults to true
   schools: [
     {
-      schoolName: "Harvard University",
-      logo: require("./assets/images/harvardLogo.png"),
-      subHeader: "Master of Science in Computer Science",
-      duration: "September 2017 - April 2019",
-      desc: "Participated in the research of XXX and published 3 papers.",
+      schoolName: "广东金融学院",
+      logo: require("./assets/images/schoolLogo.png"),
+      subHeader: "计算机科学与技术-互联网信息与金融专业",
+      duration: "2015/09 - 2019/06",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
       descBullets: [
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
       ]
-    },
-    {
-      schoolName: "Stanford University",
-      logo: require("./assets/images/stanfordLogo.png"),
-      subHeader: "Bachelor of Science in Computer Science",
-      duration: "September 2013 - April 2017",
-      desc: "Ranked top 10% in the program. Took courses about Software Engineering, Web Security, Operating Systems, ...",
-      descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
     }
+    // {
+    //   schoolName: "Stanford University",
+    //   logo: require("./assets/images/stanfordLogo.png"),
+    //   subHeader: "Bachelor of Science in Computer Science",
+    //   duration: "September 2013 - April 2017",
+    //   desc: "Ranked top 10% in the program. Took courses about Software Engineering, Web Security, Operating Systems, ...",
+    //   descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
+    // }
   ]
 };
 
 // Your top 3 proficient stacks/tech experience
 
 const techStack = {
+  title: "熟练度",
   viewSkillBars: true, //Set it to true to show Proficiency Section
   experience: [
     {
-      Stack: "Frontend/Design", //Insert stack or technology you have experience in
+      Stack: "前端", //Insert stack or technology you have experience in
       progressPercentage: "90%" //Insert relative proficiency in percentage
     },
     {
-      Stack: "Backend",
-      progressPercentage: "70%"
+      Stack: "后端",
+      progressPercentage: "60%"
     },
     {
-      Stack: "Programming",
+      Stack: "编码",
       progressPercentage: "60%"
     }
   ],
@@ -183,6 +199,7 @@ const techStack = {
 
 const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
+  title: "工作经历",
   experience: [
     {
       role: "Software Engineer",
@@ -371,11 +388,10 @@ const podcastSection = {
 };
 
 const contactInfo = {
-  title: emoji("Contact Me ☎️"),
-  subtitle:
-    "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+92-0000000000",
-  email_address: "saadpasta70@gmail.com"
+  title: emoji("联系我 ☎️"),
+  subtitle: "如果觉得我合适的话，可以邮箱通知",
+  number: "+86-18826078154",
+  email_address: "337507950@qq.com"
 };
 
 // Twitter Section
@@ -389,6 +405,7 @@ const isHireable = false; // Set false if you are not looking for a job. Also is
 
 export {
   title,
+  others,
   // -------- \\
   illustration,
   greeting,

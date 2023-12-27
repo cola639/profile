@@ -5,6 +5,7 @@ const language = isEn ? require("./portfolio_EN") : require("./portfolio_CN");
 // 读取里面导出的变量
 const {
   title,
+  others,
   //--------\\
   illustration,
   greeting,
@@ -27,6 +28,7 @@ const {
 
 export {
   title,
+  others,
   //--------\\
   illustration,
   greeting,
