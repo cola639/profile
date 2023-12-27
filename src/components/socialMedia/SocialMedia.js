@@ -39,7 +39,7 @@ export default function socialMedia() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i class="fab fa-npm"></i>
+          <i className="fab fa-npm"></i>
           <span></span>
         </a>
       ) : null}
