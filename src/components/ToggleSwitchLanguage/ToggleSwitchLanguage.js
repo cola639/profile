@@ -5,19 +5,19 @@ import "./ToggleSwitchLanguage.scss";
 
 const ToggleSwitchLanguage = () => {
   // 判断当前url是否包含cn
-  const isCN = window.location.href.includes("/cn");
+  const isCN = !window.location.href.includes("/EN");
 
   const switchLanguage = () => {
     console.log("work");
     const currentUrl = window.location.origin;
     console.log("🚀 >> switchLanguage >> currentUrl:", currentUrl);
-    const path = "/#experience";
+
     if (isCN) {
       // Switch to English
-      window.location.href = `${currentUrl}/en${path}`;
+      window.location.href = `${currentUrl}/EN/`;
     } else {
       // Switch to Chinese
-      window.location.href = `${currentUrl}/cn${path}`;
+      window.location.href = `${currentUrl}/CN/`;
     }
   };
 
