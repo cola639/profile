@@ -19,6 +19,14 @@
   color: $subTitle;
 }
 
+.podcast {
+  width: 100%;
+  height: 120px;
+}
+.podcast-main-div {
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   .podcast-header-title {
     font-size: 30px;
@@ -29,33 +37,43 @@
     line-height: normal;
     text-align: center;
   }
-
-  .podcast {
-    width: 100%;
-    height: 120px;
-  }
-  .podcast-main-div {
-    text-align: center;
-  }
-}
-
-@media (min-width: 768px) {
-  .podcast {
-    width: 100%;
-    height: 120px;
-  }
-  .podcast-main-div {
-    text-align: center;
-  }
 }
 
 // 穿透样式
 .rhap_container {
-  background-color: #531b8c !important; /* 更改播放器背景色 */
+  background-image: linear-gradient(
+    to top,
+    #a18cd1 0%,
+    #fbc2eb 100%
+  ) !important; /* 更改播放器背景色 */
 }
 
 .rhap_button-clear {
-  color: red !important; /* 更改按钮颜色 */
+  color: #3655b3 !important; /* 更改按钮颜色 */
+}
+
+.rhap_progress-bar {
+  background-color: #e0c8e0 !important; /* 更改播放条进度条颜色 */
+}
+
+.rhap_download-progress {
+  background-color: #fff !important; /* 更改播放条当前进度条颜色 */
+}
+
+.rhap_progress-indicator {
+  background: #3655b3 !important; /* 更改播放条按钮颜色 */
+}
+
+.rhap_volume-bar {
+  background: #fff !important; /* 更改播音量条颜色 */
+}
+
+.rhap_volume-indicator {
+  background: #3655b3 !important; /* 更改音量条按钮颜色 */
+}
+
+.rhap_time {
+  color: #3655b3 !important; /* 进度时长文字颜色 */
 }
 
 /* 其他需要更改的样式... */
