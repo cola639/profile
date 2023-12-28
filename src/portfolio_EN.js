@@ -40,7 +40,7 @@ const greeting = {
   username: "Saad Pasta",
   title: "Hi all, I'm Saad",
   subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks."
+    "A passionate Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / Vuejs and some other cool libraries and frameworks."
   ),
   resumeLink:
     "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
@@ -52,6 +52,7 @@ const greeting = {
 const socialMediaLinks = {
   github: "https://github.com/cola639",
   qqmail: "337507950@qq.com",
+  gmail: "xiheg1109@gmail.com",
   npm: "https://www.npmjs.com/~cola639",
 
   gitlab: "",
@@ -59,7 +60,6 @@ const socialMediaLinks = {
   medium: "",
   stackoverflow: "",
   linkedin: "",
-  gmail: "",
   // Instagram, Twitter and Kaggle are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
   display: true // Set true to display this section, defaults to false

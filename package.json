@@ -28,6 +28,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
+    "dev": "node fetch.js && react-scripts start",
     "start": "node fetch.js && react-scripts start",
     "build": "node fetch.js && react-scripts build",
     "build:prod": "node fetch.js && react-scripts build",

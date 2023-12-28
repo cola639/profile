@@ -31,29 +31,12 @@ export default function Podcast() {
           </p>
         </div>
         <div className="podcast-main-div">
-          {podcastSection.podcast.map((podcastLink, i) => {
-            if (!podcastLink) {
-              console.log(
-                `Podcast link for ${podcastSection.title} is missing`
-              );
-            }
-            return (
-              <div key={i}>
-                <AudioPlayer
-                  className="podcast"
-                  src={require("../../assets/mp3/4.3MB.mp3")}
-                  autoPlay
-                ></AudioPlayer>
-                {/* <iframe
-                  className="podcast"
-                  src={podcastLink}
-                  frameBorder="0"
-                  scrolling="no"
-                  title="Podcast"
-                ></iframe> */}
-              </div>
-            );
-          })}
+          <AudioPlayer
+            className="podcast"
+            style={{backgroundColor: "#fff"}}
+            src={require("../../assets/mp3/4.3MB.mp3")}
+            autoPlay
+          ></AudioPlayer>
         </div>
       </div>
     </Fade>

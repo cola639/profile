@@ -8,7 +8,7 @@ import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your
 const title = {
   skills: "技能",
   workExperiences: "工作经历",
-  openSource: "开源项目",
+  openSource: "项目经验",
   achievements: "成就",
   blog: "博客",
   talk: "讲座",
@@ -40,7 +40,7 @@ const greeting = {
   username: "锡和",
   title: "Hi 大家好，我是锡和",
   subTitle: emoji(
-    "一位充满热情的全栈软件开发者🚀，拥有使用JavaScript、Reactjs、Nodejs、React Native以及一些其他酷炫的库和框架构建网页和移动应用的经验。"
+    "一位充满热情的全栈软件开发者🚀，拥有使用JavaScript、Reactjs、Nodejs、Vuejs以及一些其他酷炫的库和框架构建网页和移动应用的经验。"
   ),
   resumeLink:
     "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
@@ -52,6 +52,7 @@ const greeting = {
 const socialMediaLinks = {
   github: "https://github.com/cola639",
   qqmail: "337507950@qq.com",
+  gmail: "xiheg1109@gmail.com",
   npm: "https://www.npmjs.com/~cola639",
 
   gitlab: "",
@@ -59,7 +60,7 @@ const socialMediaLinks = {
   medium: "",
   stackoverflow: "",
   linkedin: "",
-  gmail: "",
+
   // Instagram, Twitter and Kaggle are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
   display: true // Set true to display this section, defaults to false
@@ -240,7 +241,7 @@ const openSource = {
 // Some big projects you have worked on
 
 const bigProjects = {
-  title: "Big Projects",
+  title: "项目经验",
   subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
   projects: [
     {

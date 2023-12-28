@@ -48,3 +48,14 @@
     text-align: center;
   }
 }
+
+// 穿透样式
+.rhap_container {
+  background-color: #531b8c !important; /* 更改播放器背景色 */
+}
+
+.rhap_button-clear {
+  color: red !important; /* 更改按钮颜色 */
+}
+
+/* 其他需要更改的样式... */

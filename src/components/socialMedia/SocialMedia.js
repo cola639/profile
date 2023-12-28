@@ -23,11 +23,23 @@ export default function socialMedia() {
       {socialMediaLinks.qqmail ? (
         <a
           href={`mailto:${socialMediaLinks.qqmail}`}
+          className="icon-button qq"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-qq"></i>
+          <span></span>
+        </a>
+      ) : null}
+
+      {socialMediaLinks.gmail ? (
+        <a
+          href={`mailto:${socialMediaLinks.gmail}`}
           className="icon-button google"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i className="fas fa-envelope"></i>
+          <i className="fab fa-google"></i>
           <span></span>
         </a>
       ) : null}
@@ -52,18 +64,6 @@ export default function socialMedia() {
           rel="noopener noreferrer"
         >
           <i className="fab fa-linkedin-in"></i>
-          <span></span>
-        </a>
-      ) : null}
-
-      {socialMediaLinks.gmail ? (
-        <a
-          href={`mailto:${socialMediaLinks.gmail}`}
-          className="icon-button google"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i className="fas fa-envelope"></i>
           <span></span>
         </a>
       ) : null}
