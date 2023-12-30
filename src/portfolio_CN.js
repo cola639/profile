@@ -260,8 +260,8 @@ const bigProjects = {
       // ]
     },
     {
-      image: require("./assets/images/lawyer.png"),
-      projectName: "浙江法援",
+      image: require("./assets/images/lawyer.jpg"),
+      projectName: "浙江法律援助系统",
       projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
       // footerLink: [
       //   {
@@ -271,8 +271,19 @@ const bigProjects = {
       // ]
     },
     {
-      image: require("./assets/images/lawyer.png"),
-      projectName: "广东法援",
+      image: require("./assets/images/lawyer.jpg"),
+      projectName: "广东法律援助系统",
+      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      // footerLink: [
+      //   {
+      //     name: "Visit Website",
+      //     url: "http://saayahealth.com/"
+      //   }
+      // ],
+    },
+    {
+      image: require("./assets/images/guohai.png"),
+      projectName: "国海证卷H5开户",
       projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
       // footerLink: [
       //   {
@@ -360,10 +371,10 @@ const blogSection = {
         "npm package xlsx-style-fixedver 修复xlsx-style存在bug 支持前端导出Excel 支持写入每行高度"
     },
     {
-      url: "https://medium.com/@saadpasta/why-react-is-the-best-5a97563f423e",
-      title: "Why REACT is The Best?",
+      url: "https://github.com/cola639/uniapp-miniprogram-qdpz",
+      title: "uniapp 微信小程序组件模块",
       description:
-        "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
+        "基于前端铺子开源代码 实现部分更改 并修正不能正常运行的错误 支持海报生成 多个页面组件 照相机水印等功能。"
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -392,7 +403,7 @@ const talkSection = {
 
 const podcastSection = {
   title: emoji("广播 🎙️"),
-  subtitle: "这是段英语介绍 关于我自己和技术的话题",
+  subtitle: "这是段关于我自己的英语介绍 和对技术的话题",
 
   // Please Provide with Your Podcast embeded Link
   podcast: [
