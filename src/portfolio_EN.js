@@ -8,7 +8,7 @@ import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your
 const title = {
   skills: "Skills",
   workExperiences: "Work Experiences",
-  openSource: "Open Source",
+  openSource: "Project Experiences",
   achievements: "Achievements",
   blog: "Blogs",
   talk: "Talks",

@@ -10,7 +10,7 @@ const title = {
   workExperiences: "工作经历",
   openSource: "项目经验",
   achievements: "成就",
-  blog: "博客",
+  blog: "开源项目",
   talk: "讲座",
   contactMe: "联系方式"
 };
@@ -83,47 +83,58 @@ https://fontawesome.com/icons?d=gallery */
   softwareSkills: [
     {
       skillName: "html-5",
-      fontAwesomeClassname: "fab fa-html5"
+      fontAwesomeClassname: "fab fa-html5",
+      color: "#E44D26"
     },
     {
       skillName: "css3",
-      fontAwesomeClassname: "fab fa-css3-alt"
+      fontAwesomeClassname: "fab fa-css3-alt",
+      color: "#1572B6"
     },
     {
       skillName: "sass",
-      fontAwesomeClassname: "fab fa-sass"
+      fontAwesomeClassname: "fab fa-sass",
+      color: "#CC6699"
     },
     {
       skillName: "JavaScript",
-      fontAwesomeClassname: "fab fa-js"
+      fontAwesomeClassname: "fab fa-js",
+      color: "#F7DF1E"
     },
     {
       skillName: "Vue",
-      fontAwesomeClassname: "fab fa-vuejs"
+      fontAwesomeClassname: "fab fa-vuejs",
+      color: "#4FC08D"
     },
     {
       skillName: "reactjs",
-      fontAwesomeClassname: "fab fa-react"
+      fontAwesomeClassname: "fab fa-react",
+      color: "#61DAFB"
     },
     {
       skillName: "nodejs",
-      fontAwesomeClassname: "fab fa-node"
+      fontAwesomeClassname: "fab fa-node",
+      color: "#539E43"
     },
     {
       skillName: "Java",
-      fontAwesomeClassname: "fab fa-java"
+      fontAwesomeClassname: "fab fa-java",
+      color: "#F89820"
     },
     {
       skillName: "npm",
-      fontAwesomeClassname: "fab fa-npm"
+      fontAwesomeClassname: "fab fa-npm",
+      color: "#CB3837"
     },
     {
-      skillName: "sql-database",
-      fontAwesomeClassname: "fas fa-database"
+      skillName: "mysql",
+      fontAwesomeClassname: "fas fa-database",
+      color: "#F29111"
     },
     {
       skillName: "docker",
-      fontAwesomeClassname: "fab fa-docker"
+      fontAwesomeClassname: "fab fa-docker",
+      color: "#2496ED"
     }
 
     // {
@@ -203,10 +214,10 @@ const workExperiences = {
   title: "工作经历",
   experience: [
     {
-      role: "Software Engineer",
-      company: "Facebook",
-      companylogo: require("./assets/images/facebookLogo.png"),
-      date: "June 2018 – Present",
+      role: "软件工程师",
+      company: "上海百事通信息技术股份有限公司",
+      companylogo: require("./assets/images/bestone.jpg"),
+      date: "2022/4 – 现在",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       descBullets: [
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
@@ -214,17 +225,10 @@ const workExperiences = {
       ]
     },
     {
-      role: "Front-End Developer",
-      company: "Quora",
-      companylogo: require("./assets/images/quoraLogo.png"),
-      date: "May 2017 – May 2018",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-    {
-      role: "Software Engineer Intern",
-      company: "Airbnb",
-      companylogo: require("./assets/images/airbnbLogo.png"),
-      date: "Jan 2015 – Sep 2015",
+      role: "前端开发工程师",
+      company: "广州视通科技股份有限公司",
+      companylogo: require("./assets/images/shitong.png"),
+      date: "2020/6 – 2022/3",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     }
   ]
@@ -241,31 +245,41 @@ const openSource = {
 // Some big projects you have worked on
 
 const bigProjects = {
-  title: "项目经验",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  title: "大项目经验",
+  subtitle: "下面是我参与或者主导过的大型项目",
   projects: [
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Saayahealth",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      footerLink: [
-        {
-          name: "Visit Website",
-          url: "http://saayahealth.com/"
-        }
-        //  you can add extra buttons here.
-      ]
+      image: require("./assets/images/12348.png"),
+      projectName: "广东12348智慧大屏",
+      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      // footerLink: [
+      //   {
+      //     name: "Visit Website",
+      //     url: "http://saayahealth.com/"
+      //   }
+      // ]
     },
     {
-      image: require("./assets/images/nextuLogo.webp"),
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      footerLink: [
-        {
-          name: "Visit Website",
-          url: "http://nextu.se/"
-        }
-      ]
+      image: require("./assets/images/lawyer.png"),
+      projectName: "浙江法援",
+      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      // footerLink: [
+      //   {
+      //     name: "Visit Website",
+      //     url: "http://saayahealth.com/"
+      //   }
+      // ]
+    },
+    {
+      image: require("./assets/images/lawyer.png"),
+      projectName: "广东法援",
+      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      // footerLink: [
+      //   {
+      //     name: "Visit Website",
+      //     url: "http://saayahealth.com/"
+      //   }
+      // ],
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -329,22 +343,21 @@ const achievementSection = {
       ]
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Blogs Section
 
 const blogSection = {
-  title: "Blogs",
-  subtitle:
-    "With Love for Developing cool stuff, I love to write and teach others what I have learnt.",
+  title: "开源项目",
+  subtitle: "怀着对代码的热爱，我喜欢代码并开源一些工具性项目帮助其它开发者。",
   displayMediumBlogs: "true", // Set true to display fetched medium blogs instead of hardcoded ones
   blogs: [
     {
-      url: "https://blog.usejournal.com/create-a-google-assistant-action-and-win-a-google-t-shirt-and-cloud-credits-4a8d86d76eae",
-      title: "Win a Google Assistant Tshirt and $200 in Google Cloud Credits",
+      url: "https://www.npmjs.com/package/xlsx-style-fixedver",
+      title: "xlsx-style-fixedver NPM Package",
       description:
-        "Do you want to win $200 and Google Assistant Tshirt by creating a Google Assistant Action in less then 30 min?"
+        "npm package xlsx-style-fixedver 修复xlsx-style存在bug 支持前端导出Excel 支持写入每行高度"
     },
     {
       url: "https://medium.com/@saadpasta/why-react-is-the-best-5a97563f423e",
@@ -372,14 +385,14 @@ const talkSection = {
       event_url: "https://www.facebook.com/events/2339906106275053/"
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Podcast Section
 
 const podcastSection = {
-  title: emoji("Podcast 🎙️"),
-  subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
+  title: emoji("广播 🎙️"),
+  subtitle: "这是段英语介绍 关于我自己和技术的话题",
 
   // Please Provide with Your Podcast embeded Link
   podcast: [
@@ -399,7 +412,7 @@ const contactInfo = {
 
 const twitterDetails = {
   userName: "twitter", //Replace "twitter" with your twitter username without @
-  display: true // Set true to display this section, defaults to false
+  display: false // Set true to display this section, defaults to false
 };
 
 const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
