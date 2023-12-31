@@ -121,6 +121,11 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fab fa-npm"
     },
     {
+      skillName: "Git",
+      fontAwesomeClassname: "fab fa-git",
+      color: "#F05032"
+    },
+    {
       skillName: "sql-database",
       fontAwesomeClassname: "fas fa-database"
     },

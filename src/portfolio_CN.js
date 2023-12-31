@@ -127,6 +127,11 @@ https://fontawesome.com/icons?d=gallery */
       color: "#CB3837"
     },
     {
+      skillName: "Git",
+      fontAwesomeClassname: "fab fa-git",
+      color: "#F05032"
+    },
+    {
       skillName: "mysql",
       fontAwesomeClassname: "fas fa-database",
       color: "#F29111"
