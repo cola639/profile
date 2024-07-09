@@ -1,5 +1,6 @@
 // 判断当前url是否包含cn
-const isEn = window.location.href.includes("EN");
+const {lang} = paramToObj();
+const isEn = lang == "en";
 // isEn是true 导入portfolio_EN
 const language = isEn ? require("./portfolio_EN") : require("./portfolio_CN");
 // 读取里面导出的变量
@@ -29,7 +30,7 @@ const {
 export {
   title,
   others,
-  //--------\\
+  /** ------------------------------------------------- */
   illustration,
   greeting,
   socialMediaLinks,
