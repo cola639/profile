@@ -1,4 +1,5 @@
 // 判断当前url是否包含cn
+import {paramToObj} from "./utils";
 const {lang} = paramToObj();
 const isEn = lang == "en";
 // isEn是true 导入portfolio_EN
