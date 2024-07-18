@@ -13,10 +13,10 @@ const ToggleSwitchLanguage = () => {
 
     if (isZh) {
       // Switch to English
-      window.location.href = `${currentUrl}?lang='en'`;
+      window.location.href = `${currentUrl}?lang=en`;
     } else {
       // Switch to Chinese
-      window.location.href = `${currentUrl}?lang='zh'`;
+      window.location.href = `${currentUrl}?lang=zh`;
     }
   };
 
