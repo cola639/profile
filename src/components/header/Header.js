@@ -4,16 +4,7 @@ import "./Header.scss";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import ToggleSwitchLanguage from "../ToggleSwitchLanguage/ToggleSwitchLanguage";
 import StyleContext from "../../contexts/StyleContext";
-import {
-  greeting,
-  workExperiences,
-  skillsSection,
-  openSource,
-  blogSection,
-  talkSection,
-  achievementSection,
-  title
-} from "../../portfolio";
+import {greeting, workExperiences, skillsSection, openSource, blogSection, talkSection, achievementSection, title} from "../../portfolio";
 
 function Header() {
   const {isDark} = useContext(StyleContext);
@@ -33,11 +24,7 @@ function Header() {
           <span className="grey-color">/&gt;</span>
         </a>
         <input className="menu-btn" type="checkbox" id="menu-btn" />
-        <label
-          className="menu-icon"
-          htmlFor="menu-btn"
-          style={{color: "white"}}
-        >
+        <label className="menu-icon" htmlFor="menu-btn" style={{color: "white"}}>
           <span className={isDark ? "navicon navicon-dark" : "navicon"}></span>
         </label>
         <ul className={isDark ? "dark-menu menu" : "menu"}>
@@ -77,9 +64,8 @@ function Header() {
 
           <li>
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <a>
-              <ToggleSwitchLanguage />
-            </a>
+
+            <ToggleSwitchLanguage />
           </li>
 
           <li>
