@@ -27,7 +27,7 @@ pipeline {
             // 此处需要jenkins安装好docker pipeline Plugin
             agent {
                 docker {
-                    image 'node:14-alpine'
+                    image 'node:16-alpine'
                 }
             }
 
