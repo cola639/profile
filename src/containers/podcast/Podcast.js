@@ -22,7 +22,7 @@ export default function Podcast() {
           <p className={isDark ? "dark-mode podcast-header-subtitle" : "subTitle podcast-header-subtitle"}>{podcastSection.subtitle}</p>
         </div>
         <div className="podcast-main-div">
-          <AudioPlayer className="podcast" style={{backgroundColor: "#fff"}} src={require("../../assets/mp3/broadcast.m4a")} autoPlay></AudioPlayer>
+          <AudioPlayer className="podcast" style={{backgroundColor: "#fff"}} src={require("../../assets/mp3/broadcast.mp3")} autoPlay></AudioPlayer>
         </div>
       </div>
     </Fade>
