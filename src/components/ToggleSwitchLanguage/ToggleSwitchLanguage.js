@@ -4,12 +4,15 @@ import {paramToObj} from "../../utils";
 import "./ToggleSwitchLanguage.scss";
 
 const ToggleSwitchLanguage = () => {
+  let isZh = false;
   const {lang} = paramToObj();
-  const isZh = lang === "zh";
+
+  if ((lang === "zh" || window.navigator.language === "zh-CN") && lang !== "en") {
+    isZh = true;
+  }
 
   const switchLanguage = () => {
     const currentUrl = window.location.origin;
-    console.log("🚀 >> switchLanguage >> currentUrl:", currentUrl);
 
     if (isZh) {
       // Switch to English

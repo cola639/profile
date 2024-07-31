@@ -1,9 +1,15 @@
 // 判断当前url是否包含cn
 import {paramToObj} from "./utils";
+
+let isZh = false;
 const {lang} = paramToObj();
-const isEn = lang === "en";
+
+if ((lang === "zh" || window.navigator.language === "zh-CN") && lang !== "en") {
+  isZh = true;
+}
+
 // isEn是true 导入portfolio_EN
-const language = isEn ? require("./portfolio_EN") : require("./portfolio_CN");
+const language = isZh ? require("./portfolio_CN") : require("./portfolio_EN");
 // 读取里面导出的变量
 const {
   title,
