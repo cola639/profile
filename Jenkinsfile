@@ -34,7 +34,12 @@ pipeline {
             steps {
                 sh 'pwd && ls -alh'
                 sh 'node -v'
-                sh 'cd ${WS} && npm install --registry=https://registry.npmmirror.com --no-fund && npm run build:${PROFILE}'
+                sh '''
+                    cd ${WS}
+                    rm -rf node_modules package-lock.json
+                    npm install --registry=https://registry.npmmirror.com --no-fund
+                    npm run build:${PROFILE}
+                '''
             }
         }
 
