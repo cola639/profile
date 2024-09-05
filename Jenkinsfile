@@ -56,7 +56,7 @@ pipeline {
                 // 第二个 `LINKED_CONTAINER_NAME`：这是在当前（新创建的）容器内部用来引用已存在容器的别名。当在新容器中需要与 `LINKED_CONTAINER_NAME` 容器通信时，可以使用这个别名。
                 // `--link ruoyi-admin:ruoyi-admin` 命令创建了一个网络链接，使得新容器能够通过别名 `ruoyi-admin` 访问已经存在的 `ruoyi-admin` 容器。这使得两个容器之间可以通过 Docker 网络进行通信。
                 // sh 'docker run -d -p 对外端口:容器自身端口 --name ${IMAGE_NAME} --link ${LINKED_CONTAINER_NAME}:${LINKED_CONTAINER_NAME} ${IMAGE_NAME}'
-                sh 'docker run -d -p 9999:80 --name ${IMAGE_NAME} ${IMAGE_NAME}'
+                sh 'docker run -d -p 9999:80 --name ${IMAGE_NAME} --restart always ${IMAGE_NAME}'
             }
         }
     }
