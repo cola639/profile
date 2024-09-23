@@ -17,7 +17,7 @@ const title = {
 
 const others = {
   contactMe: "联系方式",
-  seeMyResume: "查看BOSS简历",
+  seeMyResume: "查看我的Github",
   footer: emoji("👋 期待您的联系 ❤️")
 };
 
@@ -39,11 +39,8 @@ const illustration = {
 const greeting = {
   username: "锡和",
   title: "Hi 大家好，我是锡和",
-  subTitle: emoji(
-    "一位充满热情的全栈软件开发者🚀，拥有使用JavaScript、Reactjs、Nodejs、Vuejs以及一些其他酷炫的库和框架构建网页和移动应用的经验。"
-  ),
-  resumeLink:
-    "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
+  subTitle: emoji("一位充满热情的全栈软件开发者🚀，拥有使用JavaScript、Reactjs、Nodejs、Vuejs以及一些其他酷炫的库和框架构建网页和移动应用的经验。"),
+  resumeLink: "https://github.com/cola639", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -174,10 +171,7 @@ const educationInfo = {
       subHeader: "计算机科学与技术-互联网信息与金融专业",
       duration: "2015/09 - 2019/06",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      ]
+      descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit", "Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
     }
     // {
     //   schoolName: "Stanford University",
@@ -224,10 +218,7 @@ const workExperiences = {
       companylogo: require("./assets/images/bestone.jpg"),
       date: "2022/4 – 现在",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      ]
+      descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit", "Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
     },
     {
       role: "前端开发工程师",
@@ -306,14 +297,12 @@ const bigProjects = {
 
 const achievementSection = {
   title: emoji("Achievements And Certifications 🏆 "),
-  subtitle:
-    "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !",
+  subtitle: "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !",
 
   achievementsCards: [
     {
       title: "Google Code-In Finalist",
-      subtitle:
-        "First Pakistani to be selected as Google Code-in Finalist from 4000 students from 77 different countries.",
+      subtitle: "First Pakistani to be selected as Google Code-in Finalist from 4000 students from 77 different countries.",
       image: require("./assets/images/codeInLogo.webp"),
       imageAlt: "Google Code-In Logo",
       footerLink: [
@@ -333,8 +322,7 @@ const achievementSection = {
     },
     {
       title: "Google Assistant Action",
-      subtitle:
-        "Developed a Google Assistant Action JavaScript Guru that is available on 2 Billion devices world wide.",
+      subtitle: "Developed a Google Assistant Action JavaScript Guru that is available on 2 Billion devices world wide.",
       image: require("./assets/images/googleAssistantLogo.webp"),
       imageAlt: "Google Assistant Action Logo",
       footerLink: [
@@ -372,14 +360,12 @@ const blogSection = {
     {
       url: "https://www.npmjs.com/package/xlsx-style-fixedver",
       title: "xlsx-style-fixedver NPM Package",
-      description:
-        "npm package xlsx-style-fixedver 修复xlsx-style存在bug 支持前端导出Excel 支持写入每行高度"
+      description: "npm package xlsx-style-fixedver 修复xlsx-style存在bug 支持前端导出Excel 支持写入每行高度"
     },
     {
       url: "https://github.com/cola639/uniapp-miniprogram-qdpz",
       title: "uniapp 微信小程序组件模块",
-      description:
-        "基于前端铺子开源代码 实现部分更改 并修正不能正常运行的错误 支持海报生成 多个页面组件 照相机水印等功能。"
+      description: "基于前端铺子开源代码 实现部分更改 并修正不能正常运行的错误 支持海报生成 多个页面组件 照相机水印等功能。"
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -389,9 +375,7 @@ const blogSection = {
 
 const talkSection = {
   title: "TALKS",
-  subtitle: emoji(
-    "I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅"
-  ),
+  subtitle: emoji("I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅"),
 
   talks: [
     {
@@ -411,9 +395,7 @@ const podcastSection = {
   subtitle: "这是段关于我自己的英语介绍 和对技术的话题",
 
   // Please Provide with Your Podcast embeded Link
-  podcast: [
-    "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
-  ],
+  podcast: ["https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"],
   display: true // Set false to hide this section, defaults to true
 };
 

@@ -17,7 +17,7 @@ const title = {
 
 const others = {
   contactMe: "Contact Me",
-  seeMyResume: "View my Resume",
+  seeMyResume: "View my Github",
   footer: emoji("👋 Looking forward to hearing from you ❤️")
 };
 
@@ -41,7 +41,7 @@ const greeting = {
   subTitle: emoji(
     "A passionate Full Stack Software Developer🚀 with experience in building web and mobile applications using JavaScript, Reactjs, Nodejs, Vuejs, and other cool libraries and frameworks."
   ),
-  resumeLink: "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
+  resumeLink: "https://github.com/cola639", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
