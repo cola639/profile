@@ -198,7 +198,7 @@ const workExperiences = {
     },
     {
       role: "Frontend Developer",
-      company: "Guangzhou Shitong Technology Co., Ltd.",
+      company: "Guangzhou ShiTong Technology Co., Ltd.",
       companylogo: require("./assets/images/shitong.png"),
       date: "January 2020 – May 2022",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."

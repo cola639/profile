@@ -226,6 +226,13 @@ const workExperiences = {
       companylogo: require("./assets/images/shitong.png"),
       date: "2021/1 – 2022/5",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      role: "前端开发工程师",
+      company: "广州蜜影信息科技有限公司",
+      companylogo: require("./assets/images/shitong.png"),
+      date: "2019/10 – 2020/10",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     }
   ]
 };
