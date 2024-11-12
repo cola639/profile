@@ -224,7 +224,7 @@ const workExperiences = {
       role: "前端开发工程师",
       company: "广州视通科技股份有限公司",
       companylogo: require("./assets/images/shitong.png"),
-      date: "2020/6 – 2022/3",
+      date: "2021/1 – 2022/5",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     }
   ]
