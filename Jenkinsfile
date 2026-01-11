@@ -1,20 +1,31 @@
 /* groovylint-disable CompileStatic, DuplicateStringLiteral, GStringExpressionWithinString, LineLength */
 pipeline {
     agent any
+
     environment {
-        // 镜像名称
+        // Docker image name for your app
         IMAGE_NAME = 'profile'
-        // 工作目录 默认当前目录
+
+        // Jenkins workspace directory
         WS = "${WORKSPACE}"
-        // 自定义的构建参数
+
+        // Custom build profile (used by: npm run build:<PROFILE>)
         PROFILE = 'prod'
-        // 链接的容器
-        LINKED_CONTAINER = 'profile_container'
+
+        // Node image version (make it easy to change later)
+        NODE_VERSION = '18'
+        NODE_IMAGE   = "node:${NODE_VERSION}-alpine"
+
+        // Docker port mapping (host -> container)
+        HOST_PORT      = '9999'
+        CONTAINER_PORT = '80'
+
+        // (Optional) Linked container name (legacy Docker link feature)
+        LINKED_CONTAINER_NAME = 'profile_container'
     }
 
-    // 定义流水线的加工流程
     stages {
-        stage('1.Enviroment') {
+        stage('1.Environment') {
             steps {
                 sh 'pwd && ls -alh'
                 sh 'printenv'
@@ -24,24 +35,26 @@ pipeline {
         }
 
         stage('2.Compile') {
-            // 此处需要jenkins安装好docker pipeline Plugin
+            // This stage runs inside a Node.js Docker container
             agent {
                 docker {
-                    image 'node:18-alpine'
+                    image "${NODE_IMAGE}"
+                    // Optional (uncomment if you hit permission issues):
+                    // reuseNode true
                 }
             }
 
             steps {
                 sh 'pwd && ls -alh'
                 sh 'node -v'
-                sh 'cd ${WS} && npm install --registry=https://registry.npmmirror.com --no-fund && npm run build:${PROFILE}'
+                sh 'cd "${WS}" && npm install --registry=https://registry.npmmirror.com --no-fund && npm run build:${PROFILE}'
             }
         }
 
         stage('3.Build') {
             steps {
                 sh 'pwd && ls -alh'
-                // 这个命令会查找当前目录（. 表示当前目录）下的 Dockerfile 并根据其指令构建 Docker 镜像
+                // Build a Docker image using the Dockerfile in the current directory
                 sh 'docker build -t ${IMAGE_NAME} .'
             }
         }
@@ -49,14 +62,27 @@ pipeline {
         stage('4.Deploy') {
             steps {
                 sh 'pwd && ls -alh'
-                // 如果已存在这个容器则先删除
+
+                // If a container with the same name exists, remove it first.
+                // Also remove dangling images to free disk space.
                 sh 'docker rm -f ${IMAGE_NAME} || true && docker rmi $(docker images -q -f dangling=true) || true'
-                // 向外暴露端口再由容器内部Nginx代理到静态文件
-                // 第一个 `LINKED_CONTAINER_NAME`：这是已存在的 Docker 容器的名称。这个容器已经在 Docker 环境中运行，您想要与之建立链接。
-                // 第二个 `LINKED_CONTAINER_NAME`：这是在当前（新创建的）容器内部用来引用已存在容器的别名。当在新容器中需要与 `LINKED_CONTAINER_NAME` 容器通信时，可以使用这个别名。
-                // `--link ruoyi-admin:ruoyi-admin` 命令创建了一个网络链接，使得新容器能够通过别名 `ruoyi-admin` 访问已经存在的 `ruoyi-admin` 容器。这使得两个容器之间可以通过 Docker 网络进行通信。
-                // sh 'docker run -d -p 对外端口:容器自身端口 --name ${IMAGE_NAME} --link ${LINKED_CONTAINER_NAME}:${LINKED_CONTAINER_NAME} ${IMAGE_NAME}'
-                sh 'docker run -d -p 9999:80 --name ${IMAGE_NAME} --restart always ${IMAGE_NAME}'
+
+                // Expose a host port, and let Nginx inside the container serve the built static files.
+                //
+                // About `--link` (legacy Docker feature):
+                // - The first `LINKED_CONTAINER_NAME` is the name of an *existing* container that is already running.
+                // - The second `LINKED_CONTAINER_NAME` is the *alias* used inside the new container to access that existing container.
+                // Example:
+                //   --link ruoyi-admin:ruoyi-admin
+                // This creates a network link so the new container can reach the existing `ruoyi-admin` container via the alias `ruoyi-admin`.
+                //
+                // Note: `--link` is considered legacy; a user-defined Docker network is the recommended approach today.
+                // But if your environment still uses `--link`, keep it as below:
+                //
+                // sh 'docker run -d -p <HOST_PORT>:<CONTAINER_PORT> --name ${IMAGE_NAME} --link ${LINKED_CONTAINER_NAME}:${LINKED_CONTAINER_NAME} ${IMAGE_NAME}'
+
+                // Run the container (host port -> container port)
+                sh 'docker run -d -p ${HOST_PORT}:${CONTAINER_PORT} --name ${IMAGE_NAME} --restart always ${IMAGE_NAME}'
             }
         }
     }

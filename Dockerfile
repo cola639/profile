@@ -1,22 +1,18 @@
-# 构建自动拉取nginx1.22版本
+# Use Nginx 1.22 as the base image (Docker will pull it automatically if not present)
 FROM nginx:1.22
 
-# 构建参数,在Jenkinsfile中构建镜像时定义
+# Build argument (can be provided from Jenkinsfile when building the image)
 ARG PROFILE
 
-# 将dist文件中的内容复制到 `/usr/share/nginx/html` 这个目录下面
-COPY build/  /usr/share/nginx/html/
+# Copy the built frontend files into Nginx's default web root
+COPY build/ /usr/share/nginx/html/
 
-# 用本地配置文件来替换nginx镜像里的默认配置
-COPY profile_nginx.conf /etc/nginx/nginx.conf
+# Replace the default Nginx configuration with our custom config
+COPY docker.conf /etc/nginx/nginx.conf
 
-# 将 SSL 证书和密钥复制到镜像中
-# COPY ruoyi-cert.pem /etc/ssl/certs/
-# COPY ruoyi-key.pem /etc/ssl/private/
-
-# DocKer容器内部运行的端口 不是实际端口
+# Expose ports inside the container (documentation only; does not publish ports automatically)
 EXPOSE 80
-# EXPOSE 443
+EXPOSE 443
 
-# 以前台形式持续运行
+# Run Nginx in the foreground so the container keeps running
 CMD ["nginx", "-g", "daemon off;"]
