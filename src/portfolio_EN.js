@@ -39,7 +39,7 @@ const greeting = {
   username: "Gavin",
   title: "Hi everyone, I'm Gavin",
   subTitle: emoji(
-    "A passionate Full Stack Software Developer🚀 with experience in building web and mobile applications using JavaScript, Reactjs, Nodejs, Vuejs, and other cool libraries and frameworks."
+    "A passionate Full Stack Software Developer🚀 with experience building web and mobile applications using JavaScript, TypeScript, React, Vue, Node.js, Java, Spring Boot, MySQL, PostgreSQL, Docker, AWS, and CI/CD tooling."
   ),
   resumeLink: "https://github.com/cola639", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
@@ -79,18 +79,19 @@ const skillsSection = {
 https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
+    // Frontend
     {
-      skillName: "html-5",
+      skillName: "Html5",
       fontAwesomeClassname: "fab fa-html5",
       color: "#E44D26"
     },
     {
-      skillName: "css3",
+      skillName: "Css3",
       fontAwesomeClassname: "fab fa-css3-alt",
       color: "#1572B6"
     },
     {
-      skillName: "sass",
+      skillName: "Sass",
       fontAwesomeClassname: "fab fa-sass",
       color: "#CC6699"
     },
@@ -100,17 +101,23 @@ https://fontawesome.com/icons?d=gallery */
       color: "#F7DF1E"
     },
     {
+      skillName: "TypeScript",
+      fontAwesomeClassname: "fas fa-code",
+      color: "#3178C6"
+    },
+    {
       skillName: "Vue",
       fontAwesomeClassname: "fab fa-vuejs",
       color: "#4FC08D"
     },
     {
-      skillName: "reactjs",
+      skillName: "React",
       fontAwesomeClassname: "fab fa-react",
       color: "#61DAFB"
     },
+    // Backend
     {
-      skillName: "nodejs",
+      skillName: "Node.js",
       fontAwesomeClassname: "fab fa-node",
       color: "#539E43"
     },
@@ -120,9 +127,36 @@ https://fontawesome.com/icons?d=gallery */
       color: "#F89820"
     },
     {
-      skillName: "npm",
-      fontAwesomeClassname: "fab fa-npm",
-      color: "#CB3837"
+      skillName: "SpringBoot",
+      fontAwesomeClassname: "fas fa-seedling",
+      color: "#6DB33F"
+    },
+    // Data
+    {
+      skillName: "MySql",
+      fontAwesomeClassname: "fas fa-database",
+      color: "#F29111"
+    },
+    {
+      skillName: "PgSql",
+      fontAwesomeClassname: "fas fa-database",
+      color: "#336791"
+    },
+    // DevOps & Tooling
+    {
+      skillName: "Docker",
+      fontAwesomeClassname: "fab fa-docker",
+      color: "#2496ED"
+    },
+    {
+      skillName: "AWS",
+      fontAwesomeClassname: "fab fa-aws",
+      color: "#FF9900"
+    },
+    {
+      skillName: "Jenkins",
+      fontAwesomeClassname: "fab fa-jenkins",
+      color: "#D24939"
     },
     {
       skillName: "Git",
@@ -130,14 +164,9 @@ https://fontawesome.com/icons?d=gallery */
       color: "#F05032"
     },
     {
-      skillName: "mysql",
-      fontAwesomeClassname: "fas fa-database",
-      color: "#F29111"
-    },
-    {
-      skillName: "docker",
-      fontAwesomeClassname: "fab fa-docker",
-      color: "#2496ED"
+      skillName: "Npm",
+      fontAwesomeClassname: "fab fa-npm",
+      color: "#CB3837"
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -168,15 +197,15 @@ const techStack = {
   experience: [
     {
       Stack: "Frontend", //Insert stack or technology you have experience in
-      progressPercentage: "90%" //Insert relative proficiency in percentage
+      progressPercentage: "100%" //Insert relative proficiency in percentage
     },
     {
       Stack: "Backend",
-      progressPercentage: "60%"
+      progressPercentage: "90%"
     },
     {
       Stack: "Programming",
-      progressPercentage: "60%"
+      progressPercentage: "90%"
     }
   ],
   displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
@@ -189,10 +218,18 @@ const workExperiences = {
   title: "Work Experiences",
   experience: [
     {
-      role: "Software Engineer",
+      role: "Full Stack Developer",
+      company: "HSBC Technology China - About HSBC",
+      companylogo: require("./assets/images/hsbc.png"),
+      date: "April 2025 – Present",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit", "Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
+    },
+    {
+      role: "Full Stack Developer",
       company: "Shanghai Bestone Information Technology Co., Ltd.",
       companylogo: require("./assets/images/bestone.jpg"),
-      date: "April 2022 – Present",
+      date: "April 2022 – December 2024",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit", "Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
     },
@@ -200,7 +237,7 @@ const workExperiences = {
       role: "Frontend Developer",
       company: "Guangzhou ShiTong Technology Co., Ltd.",
       companylogo: require("./assets/images/shitong.png"),
-      date: "January 2020 – May 2022",
+      date: "January 2020 – March 2022",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     }
   ]
@@ -214,31 +251,34 @@ const openSource = {
   display: true // Set false to hide this section, defaults to true
 };
 
-// Some big projects you have worked on
-
+// Some major projects you have worked on
 const bigProjects = {
-  title: "Major Projects",
-  subtitle: "Below are some major projects I have worked on or led",
+  title: "Selected Projects",
+  subtitle: "A selection of enterprise and public-sector projects I have delivered across fintech, legal tech, and internal platforms.",
   projects: [
     {
-      image: require("./assets/images/12348.png"),
-      projectName: "Guangdong 12348 Smart Screen",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      image: require("./assets/images/hsbc-project.png"),
+      projectName: "HSBC CI/CD Platform Setup",
+      projectDesc:
+        "Designed and implemented a team-wide CI/CD platform with standardized pipelines, role-based access control, and containerized deployment workflows to improve release reliability."
+    },
+    {
+      image: require("./assets/images/hsbc-project.png"),
+      projectName: "HSBC Configuration Business Manager",
+      projectDesc:
+        "Built an internal configuration management tool for global business teams, enabling controlled updates, permission-based operations, and auditable change history."
     },
     {
       image: require("./assets/images/lawyer.jpg"),
-      projectName: "Zhejiang Legal Aid System",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-    },
-    {
-      image: require("./assets/images/lawyer.jpg"),
-      projectName: "Guangdong Legal Aid System",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      projectName: "Guangdong Legal Aid Platform",
+      projectDesc:
+        "Developed a legal aid platform supporting online case intake, lawyer assignment, and service progress tracking to improve accessibility of public legal services."
     },
     {
       image: require("./assets/images/guohai.png"),
-      projectName: "Guohai Securities H5 Account Opening",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      projectName: "Guohai Securities Digital Account Opening",
+      projectDesc:
+        "Delivered a securities account opening system with structured onboarding workflows, data validation, and compliance-oriented process controls."
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -355,8 +395,8 @@ const podcastSection = {
 const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle: "Feel free to contact my phone or email.",
-  number: "+86-18826078154",
-  email_address: "337507950@qq.com"
+  number: "+1-8722587974",
+  email_address: "xiheg1109@gmail.com"
 };
 
 // Twitter Section
