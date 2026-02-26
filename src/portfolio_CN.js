@@ -39,7 +39,9 @@ const illustration = {
 const greeting = {
   username: "锡和",
   title: "Hi 大家好，我是锡和",
-  subTitle: emoji("一位充满热情的全栈软件开发者🚀，拥有使用JavaScript、Reactjs、Nodejs、Vuejs以及一些其他酷炫的库和框架构建网页和移动应用的经验。"),
+  subTitle: emoji(
+    "一位充满热情的全栈软件开发者🚀，具备使用 JavaScript、TypeScript、React、Vue、Node.js、Java、Spring Boot、MySQL、PostgreSQL、Docker、AWS 以及 CI/CD 工具构建 Web 与移动应用的经验。"
+  ),
   resumeLink: "https://github.com/cola639", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
@@ -67,7 +69,7 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "技术栈",
-  subTitle: "全栈爱好者 对新技术不断追求 并实践到新项目中",
+  subTitle: "全栈技术爱好者，持续探索新技术并将其落地到实际项目中",
   skills: [
     emoji("⚡ 为企业网页和移动应用开发高度交互式的前端/用户界面"),
     emoji("⚡ 在常规和单页应用（SPA）技术栈中开发渐进式网页应用（PWA）"),
@@ -78,18 +80,19 @@ const skillsSection = {
 https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
+    // Frontend
     {
-      skillName: "html-5",
+      skillName: "Html5",
       fontAwesomeClassname: "fab fa-html5",
       color: "#E44D26"
     },
     {
-      skillName: "css3",
+      skillName: "Css3",
       fontAwesomeClassname: "fab fa-css3-alt",
       color: "#1572B6"
     },
     {
-      skillName: "sass",
+      skillName: "Sass",
       fontAwesomeClassname: "fab fa-sass",
       color: "#CC6699"
     },
@@ -99,17 +102,23 @@ https://fontawesome.com/icons?d=gallery */
       color: "#F7DF1E"
     },
     {
+      skillName: "TypeScript",
+      fontAwesomeClassname: "fas fa-code",
+      color: "#3178C6"
+    },
+    {
       skillName: "Vue",
       fontAwesomeClassname: "fab fa-vuejs",
       color: "#4FC08D"
     },
     {
-      skillName: "reactjs",
+      skillName: "React",
       fontAwesomeClassname: "fab fa-react",
       color: "#61DAFB"
     },
+    // Backend
     {
-      skillName: "nodejs",
+      skillName: "Node.js",
       fontAwesomeClassname: "fab fa-node",
       color: "#539E43"
     },
@@ -119,9 +128,36 @@ https://fontawesome.com/icons?d=gallery */
       color: "#F89820"
     },
     {
-      skillName: "npm",
-      fontAwesomeClassname: "fab fa-npm",
-      color: "#CB3837"
+      skillName: "SpringBoot",
+      fontAwesomeClassname: "fas fa-seedling",
+      color: "#6DB33F"
+    },
+    // Data
+    {
+      skillName: "MySql",
+      fontAwesomeClassname: "fas fa-database",
+      color: "#F29111"
+    },
+    {
+      skillName: "PgSql",
+      fontAwesomeClassname: "fas fa-database",
+      color: "#336791"
+    },
+    // DevOps & Tooling
+    {
+      skillName: "Docker",
+      fontAwesomeClassname: "fab fa-docker",
+      color: "#2496ED"
+    },
+    {
+      skillName: "AWS",
+      fontAwesomeClassname: "fab fa-aws",
+      color: "#FF9900"
+    },
+    {
+      skillName: "Jenkins",
+      fontAwesomeClassname: "fab fa-jenkins",
+      color: "#D24939"
     },
     {
       skillName: "Git",
@@ -129,32 +165,10 @@ https://fontawesome.com/icons?d=gallery */
       color: "#F05032"
     },
     {
-      skillName: "mysql",
-      fontAwesomeClassname: "fas fa-database",
-      color: "#F29111"
-    },
-    {
-      skillName: "docker",
-      fontAwesomeClassname: "fab fa-docker",
-      color: "#2496ED"
+      skillName: "Npm",
+      fontAwesomeClassname: "fab fa-npm",
+      color: "#CB3837"
     }
-
-    // {
-    //   skillName: "swift",
-    //   fontAwesomeClassname: "fab fa-swift"
-    // },
-    // {
-    //   skillName: "aws",
-    //   fontAwesomeClassname: "fab fa-aws"
-    // },
-    // {
-    //   skillName: "firebase",
-    //   fontAwesomeClassname: "fas fa-fire"
-    // },
-    // {
-    //   skillName: "python",
-    //   fontAwesomeClassname: "fab fa-python"
-    // }
   ],
   display: true // Set false to hide this section, defaults to true
 };
@@ -213,26 +227,27 @@ const workExperiences = {
   title: "工作经历",
   experience: [
     {
-      role: "软件工程师",
-      company: "上海百事通信息技术股份有限公司",
+      role: "全栈开发工程师",
+      company: "汇丰科技中国（HSBC Technology China）",
+      companylogo: require("./assets/images/hsbc.png"),
+      date: "2025年4月 – 至今",
+      desc: "负责企业级应用的全栈开发与交付，推进系统稳定性、可维护性与协作效率持续提升。",
+      descBullets: ["搭建并优化团队开发与发布流程，提高交付质量", "参与核心业务模块设计与实现，保障功能可扩展与可追踪"]
+    },
+    {
+      role: "全栈开发工程师",
+      company: "上海贝斯通信息技术有限公司",
       companylogo: require("./assets/images/bestone.jpg"),
-      date: "2022/4 – 现在",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit", "Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
+      date: "2022年4月 – 2024年12月",
+      desc: "参与多行业业务系统建设，覆盖需求分析、前后端开发、测试联调与上线支持。",
+      descBullets: ["主导核心功能模块开发并推进跨团队协作", "持续优化系统性能与用户体验，提升业务处理效率"]
     },
     {
       role: "前端开发工程师",
-      company: "广州视通科技股份有限公司",
+      company: "广州世通信息科技有限公司",
       companylogo: require("./assets/images/shitong.png"),
-      date: "2021/1 – 2022/5",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-    {
-      role: "前端开发工程师",
-      company: "广州蜜影信息科技有限公司",
-      companylogo: require("./assets/images/shitong.png"),
-      date: "2019/10 – 2020/10",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      date: "2020年1月 – 2022年3月",
+      desc: "负责 Web 端前端架构与页面开发，推动界面交互优化并提升整体可用性。"
     }
   ]
 };
@@ -245,55 +260,31 @@ const openSource = {
   display: true // Set false to hide this section, defaults to true
 };
 
-// Some big projects you have worked on
+// Some major projects you have worked on
 
 const bigProjects = {
-  title: "大项目经验",
-  subtitle: "下面是我参与或者主导过的大型项目",
+  title: "精选项目",
+  subtitle: "以下是我在金融科技、法律科技与企业内部平台领域交付的代表性项目。",
   projects: [
     {
-      image: require("./assets/images/12348.png"),
-      projectName: "广东12348智慧大屏",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      // footerLink: [
-      //   {
-      //     name: "Visit Website",
-      //     url: "http://saayahealth.com/"
-      //   }
-      // ]
+      image: require("./assets/images/hsbc-project.png"),
+      projectName: "汇丰团队 CI/CD 平台建设",
+      projectDesc: "设计并落地团队级 CI/CD 平台，统一流水线规范、基于角色的访问控制（RBAC）与容器化部署流程，显著提升发布稳定性。"
+    },
+    {
+      image: require("./assets/images/hsbc-project.png"),
+      projectName: "汇丰配置业务管理工具",
+      projectDesc: "开发面向全球业务团队的内部配置管理工具，支持受控变更、权限化操作与可审计的历史记录。"
     },
     {
       image: require("./assets/images/lawyer.jpg"),
-      projectName: "浙江法律援助系统",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      // footerLink: [
-      //   {
-      //     name: "Visit Website",
-      //     url: "http://saayahealth.com/"
-      //   }
-      // ]
-    },
-    {
-      image: require("./assets/images/lawyer.jpg"),
-      projectName: "广东法律援助系统",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      // footerLink: [
-      //   {
-      //     name: "Visit Website",
-      //     url: "http://saayahealth.com/"
-      //   }
-      // ],
+      projectName: "广东法律援助平台",
+      projectDesc: "建设法律援助平台，支持线上案件受理、律师分配与服务进度跟踪，提升公共法律服务可达性与办理效率。"
     },
     {
       image: require("./assets/images/guohai.png"),
-      projectName: "国海证卷H5开户",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      // footerLink: [
-      //   {
-      //     name: "Visit Website",
-      //     url: "http://saayahealth.com/"
-      //   }
-      // ],
+      projectName: "国海证券数字化开户系统",
+      projectDesc: "交付证券开户系统，构建标准化开户流程、数据校验与合规管控机制，提升开户效率与过程可控性。"
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -409,7 +400,7 @@ const podcastSection = {
 const contactInfo = {
   title: emoji("联系我 ☎️"),
   subtitle: "如果符合您的企业要求，欢迎电话和邮箱联系 ~ ",
-  number: "+86-18826078154",
+  number: "+86-18826078154 || +1-8722587974",
   email_address: "337507950@qq.com"
 };
 
