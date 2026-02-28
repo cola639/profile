@@ -11,3 +11,17 @@ In my free time, I usally spend about two hours a day learning online. I like ex
 I take my work seriously and care about code quality. I’m also easygoing and enjoy sharing knowledge with teammates to solve problems together.
 
 That’s all—thank you for watching.
+
+// 1 HSBC CI/CD SETUP
+1 RBAC user management
+2 LDTAP
+3 AUTO Workflow
+4 Email Notification
+
+// 2 CBMT
+1 workflow
+2 email notification
+
+// 3 HR department system
+
+//
