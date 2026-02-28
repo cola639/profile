@@ -222,23 +222,29 @@ const workExperiences = {
       company: "HSBC Technology China - About HSBC",
       companylogo: require("./assets/images/hsbc.png"),
       date: "April 2025 – Present",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit", "Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
+      desc: "Responsible for end-to-end delivery of enterprise applications, continuously improving system stability, maintainability, and team collaboration efficiency.",
+      descBullets: [
+        "Built and optimized team development and release workflows to improve delivery quality",
+        "Designed and implemented core business modules with scalability and traceability in mind"
+      ]
     },
     {
       role: "Full Stack Developer",
       company: "Shanghai Bestone Information Technology Co., Ltd.",
       companylogo: require("./assets/images/bestone.jpg"),
       date: "April 2022 – December 2024",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit", "Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
+      desc: "Delivered multi-industry business systems across requirement analysis, full-stack development, integration testing, and production rollout support.",
+      descBullets: [
+        "Led development of key feature modules and coordinated cross-team delivery",
+        "Continuously optimized system performance and user experience to improve business efficiency"
+      ]
     },
     {
       role: "Frontend Developer",
       company: "Guangzhou ShiTong Technology Co., Ltd.",
       companylogo: require("./assets/images/shitong.png"),
       date: "January 2020 – March 2022",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      desc: "Owned web frontend architecture and feature delivery, driving interaction quality improvements and better overall product usability."
     }
   ]
 };
